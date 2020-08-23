@@ -1,0 +1,13 @@
+.image-popup__card {
+  max-width: 70vw;
+  max-height: 70vh; 
+  
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+  
+  
+  background-size: cover;
+  background-position: center;
+}
+  

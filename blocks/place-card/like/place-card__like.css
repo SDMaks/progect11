@@ -1,0 +1,6 @@
+.place-card__like{
+    display: flex;
+    width: 21px;
+    /*height: 19px;*/
+    flex-direction: column;
+}

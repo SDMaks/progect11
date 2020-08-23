@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name">Jaques Causteau</h1>
+          <p class="user-info__job">Sailor, Researcher</p>
+          <button class="button user-info-profile__button">Edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+ 
+    <div id='popup-profile' class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id='close-profile' class="popup__close">
+        <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="newProfile" novalidate >
+            <input type="text"  minlength="1"  required name="nameprofile" class="popup__input" placeholder="Имя">
+            <span class='popup__input-error-message'></span>
+            <input type="text"  minlength="1"  required name="about" class="popup__input" placeholder="О себе">
+            <span class='popup__input-error-message'></span>
+            <button type id='popup__button-profile' class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+
+    <div id='popup-card' class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id='close-card' class="popup__close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new" novalidate>
+            <input type="text" name="name" minlength="1"  required class="popup__input" placeholder="Название">
+            <span class='popup__input-error-message'></span>
+            <input type="url" name="link"   required class="popup__input" pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})" placeholder="Ссылка на картинку">
+            <span class='popup__input-error-message'></span>
+            <button type id='popup__button' class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+
+    <div id='popup-image' class="popup">
+      <div class="popup__border">
+      <img class="image-popup__card" style>
+      <img src="./images/close.svg" alt="" id='close-image' class="popup__close">
+    </div>
+    
+    </div>
+
+    <div id='popup-avatar' class="popup">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" id='close-avatar' class="popup__close">
+        <h3 class="popup__title">Обновить аватар</h3>
+        <form class="popup__form" name="newAvatar" novalidate >
+            <input type="url" name="avatar"   required class="popup__input" pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})" placeholder="Ссылка на аватар">
+            <span class='popup__input-error-message'></span>
+        <button type id='popup__button-avatar' class="button popup__button">+</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <script src="api.js" defer></script>
+  <script src="card.js" defer></script>
+  <script src="CardList.js" defer></script>
+  <script src="Popup.js" defer></script>
+  <script src="PopupImage.js" defer></script>
+  <script src="UserInfo.js" defer></script>
+  <script src="Form.js" defer></script>
+  <script src="Validation.js" defer></script>
+  <script src="PopupForm.js" defer></script>
+  <script src="Avatar.js" defer></script>
+  <script src="index.js" defer></script>
+  
+</body>
+</html>
